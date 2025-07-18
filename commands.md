@@ -8,6 +8,12 @@ This command is used to **start your application using Docker Compose**, with a 
 docker compose up --build -d
 ```
 
+## Access the docker container shell
+
+```bash
+docker exec --it django_app sh
+```
+
 ## Django Commands
 
 Run the following commands to create your Django project, apps, and apply migrations.
@@ -28,4 +34,26 @@ python manage.py startapp inventory
 
 ```bash
 python manage.py migrate
+```
+
+### To run the script in shell 
+
+```bash
+python manage.py shell
+```
+
+### View Inventory Database
+
+```bash
+psql -U postgres -d inventory
+```
+to view all tables
+```bash
+\d
+\dt
+```
+
+### View inventory_product table
+```bash
+\d inventoy_product
 ```

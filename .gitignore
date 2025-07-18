@@ -1,35 +1,42 @@
-# Byte-compiled / optimized / DLL files
+# **Python Ignore Files**
 __pycache__/
 *.pyc
+*.pyo
 *.pyd
-*.so
 
-# Environments
-.env
-venv/
-env/
-.direnv/
-
-# Django-specific files
-*.log
-*.pot
+# **Django-Specific Ignore**
 db.sqlite3
-local_settings.py
+*.sqlite3
+*.log
 media/
-static/
+staticfiles/
 
-# IDE-specific files
-.idea/  # PyCharm
-.vscode/ # VS Code
-.DS_Store # macOS
-Thumbs.db # Windows
+# **Environment Variables & Secrets**
+.env
+.env.local
+.env.production
+.env.*
 
-# Test and coverage files
-.coverage
-.tox/
-.eggs/
+# **Migrations (Optional)**
+**/migrations/*.py
+!**/migrations/__init__.py
 
-# Other temporary files
-*.tmp
-*.bak
-*.swp
+# **Docker Ignore (If using Docker)**
+*.pid
+*.tar
+*.log
+
+# **Django-Specific Ignore**
+db.sqlite3
+*.sqlite3
+*.log
+media/
+**/static/*
+
+# **Migrations (Optional)**
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# **MacOS & System Files**
+.DS_Store
+Thumbs.db
